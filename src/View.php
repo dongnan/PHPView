@@ -92,14 +92,15 @@ class View {
      * @param string $charset 模板输出字符集
      * @param string $contentType 输出类型
      * @param string $cacheControl 缓存控制
+     * @param string $xPoweredBy X-Powered-By
      * @return mixed
      */
-    public function render($templateFile, $data = array(), $charset = 'utf-8', $contentType = 'text/html', $cacheControl = 'private') {
+    public function render($templateFile, $data = array(), $charset = 'utf-8', $contentType = 'text/html', $cacheControl = 'private', $xPoweredBy = '') {
         // 网页字符编码
         header('Content-Type:' . $contentType . '; charset=' . $charset);
         // 页面缓存控制
         header('Cache-control: ' . $cacheControl);
-        header('X-Powered-By:Linky');
+        $xPoweredBy && header('X-Powered-By:' . $xPoweredBy);
         //解析并获取模板内容
         $content = $this->fetch($templateFile, $data);
         // 输出模板文件
