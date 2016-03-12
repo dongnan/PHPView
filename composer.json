@@ -1,6 +1,6 @@
 {
     "name": "dongnan/phpview",
-    "type": "framework",
+    "type": "library",
     "description": "A template engine for php",
     "keywords": ["phpview", "template"],
     "homepage": "http://phpview.idongnan.cn/",
@@ -16,7 +16,7 @@
     },
     "autoload": {
         "psr-4": {
-            "PHPView\\": "src/PHPView/"
+            "PHPView\\": "src/"
         }
     }
 }
