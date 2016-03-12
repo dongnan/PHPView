@@ -59,7 +59,7 @@ class View {
      * @param array $data 模板数据
      * @return string
      */
-    public function fetch($templateFile = '', $data = array()) {
+    public function fetch($templateFile, $data = array()) {
         // 模板文件不存在直接返回
         if (!is_file($templateFile)) {
             throw new Exception("TEMPLATE '{$templateFile}' IS NOT EXIST!");
@@ -94,7 +94,7 @@ class View {
      * @param string $cacheControl 缓存控制
      * @return mixed
      */
-    public function render($templateFile = '', $data = array(), $charset = 'utf-8', $contentType = 'text/html', $cacheControl = 'private') {
+    public function render($templateFile, $data = array(), $charset = 'utf-8', $contentType = 'text/html', $cacheControl = 'private') {
         // 网页字符编码
         header('Content-Type:' . $contentType . '; charset=' . $charset);
         // 页面缓存控制
