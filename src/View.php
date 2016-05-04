@@ -16,7 +16,7 @@ use \Exception;
 /**
  * PHPView
  *
- * @author DongNan <dongyh@126.com>
+ * @author Dong Nan <hidongnan@gmail.com>
  * @date 2016-03-11
  */
 class View {
